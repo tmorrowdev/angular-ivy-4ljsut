@@ -1,0 +1,61 @@
+<header id="main">
+  <button id="menu"><mat-icon>menu</mat-icon></button>
+  <div id="buttonBorder"></div>
+  <mat-icon id="costar" svgIcon="costar"></mat-icon>
+  <mat-form-field
+    ><input
+      matInput
+      type="search"
+      id="searchBar"
+      aria-placeholder="Search"
+      placeholder="Search"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <div id="headerIcons">
+    <i>
+      <svg width="20" height="20" viewport="4 4 20 20" [ngClass]="iconClass">
+        <use
+          [attr.fill]="fill"
+          [attr.transform]="transform"
+          attr.xlink:href="assets/{{ iconCat }}-icons.svg#{{
+            icon
+          }}"
+        ></use>
+      </svg> </i
+    ><i>
+      <svg width="16" height="16" viewport="4 4 16 16" [ngClass]="iconClass">
+        <use
+          [attr.fill]="fill"
+          [attr.transform]="transform"
+          attr.xlink:href="assets/{{ iconCat2 }}-icons.svg#{{
+            icon2
+          }}"
+        ></use>
+      </svg>
+    </i>
+  </div>
+</header>
+<div class="pn-ProductNav_Wrapper">
+  <div class="pn-ProductNav_Wrapper">
+    <nav id="pnProductNav" class="pn-ProductNav">
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)"
+      >
+        <div ngxSlickItem *ngFor="let slide of slides">
+          <a mat-button class="pn-ProductNav_Link" routerLink="#"
+            >{{slide.name}}</a
+          >
+        </div>
+      </ngx-slick-carousel>
+    </nav>
+    <button mat-button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+    <button mat-button (click)="slickModal.unslick()">unslick</button>
+  </div>
+</div>

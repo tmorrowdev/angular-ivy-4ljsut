@@ -1,0 +1,210 @@
+/* Add application styles & imports to this file! */
+
+.mat-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: unset !important;
+  line-height: 16px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+}
+mat-form-field .mat-form-field-infix {
+  display: block;
+  position: relative;
+  flex: auto;
+  min-width: 0;
+  width: 229px;
+}
+/* mat-form-field input#searchBar:focus {
+width: 400px !important;
+position: absolute;
+background: white;  
+top: -28px;
+transition: cubic-bezier(width 1s ease-in-out)
+} */
+mat-form-field #searchBar:focus {
+  width: 350px !important;
+  border-radius: 2px;
+  border: 1px solid #bfbfbf;
+  font-family: Helvetica, system-ui, sans-serif;
+  height: 16px !important;
+  padding: 8px;
+  line-height: 32px;
+  background: white;
+  transition: translate(left 2s ease-in-out);
+  position: absolute;
+  min-width: 350px;
+  left: -92px;
+  top: -29px;
+}
+* {
+  box-sizing: inherit;
+}
+.pn-ProductNav_Wrapper {
+  position: relative;
+
+  box-sizing: border-box;
+}
+.pn-ProductNav {
+  /* Make this scrollable when needed */
+  overflow-x: auto;
+  /* We don't want vertical scrolling */
+  overflow-y: hidden;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* We don't want internal inline elements to wrap */
+  white-space: nowrap;
+  /* If JS present, let's hide the default scrollbar */
+  position: relative;
+  font-size: 0;
+}
+
+.pn-ProductNav_Contents {
+  float: left;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+}
+.pn-ProductNav_Contents-no-transition {
+  transition: none;
+}
+.pn-ProductNav_Link {
+  color: white;
+  font-family: Helvetica, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 8px 16px;
+  padding: 0 0 8px 0;
+}
+.pn-ProductNav_Link + .pn-ProductNav_Link {
+  border-left-color: #eee;
+}
+.mat-button.pn-ProductNav_Link[aria-selected='true'] {
+  border-bottom: 4px solid #ec4a08 !important ;
+}
+.pn-Advancer {
+  /* Reset the button */
+  appearance: none;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.pn-Advancer:focus {
+  outline: 0;
+}
+.pn-Advancer:hover {
+  cursor: pointer;
+  /* Now style it as needed */
+  /* Set the buttons invisible by default */
+}
+.pn-Advancer_Left {
+  left: 0;
+}
+[data-overflowing='both'] ~ .pn-Advancer_Left,
+[data-overflowing='left'] ~ .pn-Advancer_Left {
+  opacity: 1;
+}
+.pn-Advancer_Right {
+  right: 0;
+}
+[data-overflowing='both'] ~ .pn-Advancer_Right,
+[data-overflowing='right'] ~ .pn-Advancer_Right {
+  opacity: 1;
+}
+.pn-Advancer_Icon {
+  width: 20px;
+  height: 44px;
+  fill: #bbb;
+}
+.pn-ProductNav_Indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100px;
+  background-color: transparent;
+  transform-origin: 0 0;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+#pnProductNavContents {
+  background: #24335a !important;
+  width: 420px;
+  overflow: auto hidden;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb:horizontal {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #d0d0d0;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:vertical {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #d0d0d0;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #aaa;
+}
+.mat-form-field-infix .mat-form-field-label-wrapper {
+  position: absolute;
+  top: 9px !important;
+  left: 8px !important;
+  font-family: Helvetica, system-ui, sans-serif;
+  font-size: 16px;
+  color: #bfbfbf;
+}
+ngx-slick-carousel.carousel {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  position: relative;
+  font-size: 0;
+
+  background: #24335a;
+  width: 420px;
+  display: flex;
+  overflow: auto hidden;
+  align-items: center;
+  height: 32px;
+  justify-content: flex-start;
+}

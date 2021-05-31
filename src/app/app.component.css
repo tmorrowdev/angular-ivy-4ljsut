@@ -1,0 +1,77 @@
+@import './icons-brand.css';
+#main {
+  height: 48px;
+  width: 420px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+button {
+  border: none;
+  height: 100%;
+  width: 50px;
+  background: white;
+}
+button mat-icon {
+  color: #24335a;
+}
+#buttonBorder {
+  width: 1px;
+  height: 48px;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+mat-icon#costar {
+  padding: 0px 16px;
+}
+mat-form-field #searchBar {
+  width: 229px;
+
+  border-radius: 2px;
+  border: 1px solid #bfbfbf;
+
+  font-family: Helvetica, system-ui, sans-serif;
+
+  height: 16px !important;
+  padding: 8px;
+  line-height: 32px;
+}
+#searchBar:focus,
+#searchBar:focus-within,
+#searchBar:active {
+  border: 1px solid #bfbfbf !important;
+}
+mat-form-field mat-icon.mat-icon {
+  position: relative;
+  left: -10px;
+  color: #bfbfbf;
+}
+
+i {
+  margin: 0 8px;
+}
+#header2 {
+  height: 32px;
+  width: 420px;
+  display: flex;
+  background: #24335a;
+}
+a.mat-button {
+  color: white;
+  font-family: Helvetica, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 8px 16px;
+  padding: 0px;
+}
+a.mat-button.routerLinkActive {
+  border-bottom: 4px solid #ec4a08;
+}
+div#headerIcons {
+  display: flex;
+}
+nav#pnProductNav {
+  background: #24335a;
+  width: 420px;
+  overflow: auto hidden;
+}
