@@ -1,7 +1,7 @@
 import { Component, ElementRef, VERSION } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-
+let $: any;
 export interface Slide {
   name: string;
 }
@@ -27,8 +27,8 @@ export class AppComponent {
   ticking = false;
 
   slideConfig = {
-    slidesToScroll: 1,
-    dots: false,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     infinite: false,
     nextArrow: `<div  class='next-slide'><mat-icon >navigate-next</mat-icon></div>`,
     prevArrow: `<div class='next-slide'>chevron-left<mat-icon ></mat-icon></div>`
@@ -65,6 +65,9 @@ export class AppComponent {
       this.iconArray2 = this.icon2.split('-');
       this.iconCat2 = this.iconArray2[0];
     }
+  }
+  ngOnInit() {
+    $('body').addClass('df');
   }
   slickInit(e) {
     console.log('slick initialized');
