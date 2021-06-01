@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -21,7 +20,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatRadioModule,
     MatIconModule,
     MatButtonModule,
-    SlickCarouselModule,
+    
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,

@@ -2,8 +2,7 @@
   <button id="menu"><mat-icon>menu</mat-icon></button>
   <div id="buttonBorder"></div>
   <mat-icon id="costar" svgIcon="costar"></mat-icon>
-  <mat-form-field
-    ><input
+  <mat-form-field><input
       matInput
       type="search"
       id="searchBar"
@@ -22,8 +21,7 @@
             icon
           }}"
         ></use>
-      </svg> </i
-    ><i>
+      </svg> </i><i>
       <svg width="16" height="16" viewport="4 4 16 16" [ngClass]="iconClass">
         <use
           [attr.fill]="fill"
@@ -38,22 +36,12 @@
 </header>
 <div class="pn-ProductNav_Wrapper">
   <div class="pn-ProductNav_Wrapper">
-    <nav id="pnProductNav" class="pn-ProductNav">
-      <ngx-slick-carousel
-        class="carousel"
-        #slickModal="slick-carousel"
-        [config]="slideConfig"
-        (init)="slickInit($event)"
-        (breakpoint)="breakpoint($event)"
-        (afterChange)="afterChange($event)"
-        (beforeChange)="beforeChange($event)"
-      >
-        <div ngxSlickItem *ngFor="let slide of slides">
-          <a mat-button class="pn-ProductNav_Link" routerLink="#"
-            >{{slide.name}}</a
-          >
-        </div>
-      </ngx-slick-carousel>
+    <nav mat-tab-nav-bar>
+
+      <div *ngFor="let slide of slides">
+        <a mat-button class="pn-ProductNav_Link" routerLink="#">{{slide.name}}</a>
+      </div>
+
     </nav>
     <button mat-button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
     <button mat-button (click)="slickModal.unslick()">unslick</button>
